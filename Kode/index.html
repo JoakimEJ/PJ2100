@@ -9,16 +9,21 @@
   <title>Tittel</title>
     <style>
         
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
         @font-face{
         font-family: 'font';
         src: url(fonter/newrepublic/SF%20New%20Republic.ttf);
         }
         
         html, body, #wrapper {
-            height: 1080px;
-            width: 98%;
+            height: 100%;
+            width: 100%;
             background-image: url(images/background2.jpg);
-            background-size: cover;
+            background-size: 100%;
             font-family: 'font', sans-serif;
             text-transform: uppercase;
             position: relative;
@@ -27,17 +32,13 @@
         #headerContainer{
             height: 75px;
             position: relative;
-            margin: 0 auto;
-            min-width: 107.2%;
-            margin-left: -20px;
-            margin-top: -22px;
+            min-width: 100%;
             
         }
         
         #navMenuTop{
             width: 100%;
             height: 100%;
-            margin-top: -8px;
             text-align: center;
             background-color: rgb(245,245,245);
             opacity: 0.8;
@@ -102,14 +103,17 @@
         /*-Footer-*/
         
         #footerContainer{
-            min-width: 107.2%;
+            min-width: 100%;
             position: absolute;
             height: 52px;
             bottom: 0;
-            margin-left: -20px;
-            margin-bottom: -25px;
             background-color: rgb(245,245,245);
             opacity: 0.7;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            list-style: none;
+            margin-bottom: -35px;
+            float: left;
         }
         
         #logo{
