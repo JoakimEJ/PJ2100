@@ -4,10 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="hexStyle.css"> 
     
 
   <title>Tittel</title>
     <style>
+        
         
         *{
             margin: 0px;
@@ -15,24 +17,27 @@
         }
         
         @font-face{
-        font-family: 'font';
-        src: url(fonter/newrepublic/SF%20New%20Republic.ttf);
+            font-family: 'font';
+            src: url(fonter/newrepublic/SF%20New%20Republic.ttf);
         }
         
         html, body, #wrapper {
             height: 100%;
             width: 100%;
-            background-image: url(images/background2.jpg);
-            background-size: 100%;
+            background-image: url(images/broccoli_treehouse.jpg);
+            background-size: cover;
             font-family: 'font', sans-serif;
             text-transform: uppercase;
             position: relative;
         }
         
         #headerContainer{
-            height: 75px;
+            height: 70px;
             position: relative;
-            min-width: 100%;
+            min-width: 50%;
+            max-width: 100%;
+            z-index: 1;
+            white-space: nowrap;
             
         }
         
@@ -42,11 +47,13 @@
             text-align: center;
             background-color: rgb(245,245,245);
             opacity: 0.8;
+             white-space: nowrap;
         }
         
         #fjerdingen{
             position: relative;
             top: 15px;
+             white-space: nowrap;
         }
         
         /*--Navigation--*/
@@ -59,6 +66,7 @@
             right: 50px;
             position: absolute;
             top: 5px;
+             white-space: nowrap;
         }
 
         #menu{
@@ -111,9 +119,10 @@
             opacity: 0.7;
             box-sizing: border-box;
             padding: 10px 20px;
-            list-style: none;
-            margin-bottom: -35px;
+            list-style: none;   
             float: left;
+            white-space: nowrap;
+            overflow: hidden;
         }
         
         #logo{
@@ -122,7 +131,38 @@
             position: absolute;
             
         }
-        /*-!Footer-*/
+        /*-!Footer-*/   
+        
+        /*--HexMeny--*/
+        
+        #hexMenyContainer{
+            max-height: 40%;
+            max-width: 75%;
+            min-height: 75%;
+            top: 8%;
+            margin: auto;
+            position:relative;
+            overflow: hidden;
+    
+            
+        }
+        
+        #hexOne{
+            position:absolute;
+            left: 38%;
+        }
+        
+        #hexTwo{
+            position: absolute;
+            left: 28%;
+            top: 35%;
+        }
+        
+        #hexThree{
+            position: absolute;
+            top: 35%;
+            left: 48%;
+        }
     </style>  
 
 </head>
@@ -153,6 +193,31 @@
             </div>
         
         </footer>
+        <div id="hexMenyContainer">
+            <ul id="hexGrid">
+                <li id ="hexOne" class ="hex">
+                     <a class ="hexIn" href="#">
+                        <img src="images/background.jpg">
+                        <h1>Workshops</h1>
+                        <p>Opprett eller meld deg på workshops</p>
+                     </a>
+                 </li>
+                 <li id ="hexTwo" class ="hex">
+                     <a class ="hexIn" href="#">
+                        <img src="images/background4.jpeg">
+                        <h1>Kurs</h1>
+                        <p>Kurs av og for elever</p>
+                     </a>
+                 </li>
+                <li id ="hexThree" class ="hex">
+                     <a class ="hexIn" href="#">
+                        <img src="images/background3.jpg">
+                        <h1>Sosialt</h1>    
+                        <p>Se hva som skjer på og utenfor Campus Fjerdingen</p>
+                     </a>
+                 </li> 
+            </ul>
+        </div>
     </div>  
 </body>
 
