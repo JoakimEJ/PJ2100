@@ -38,7 +38,7 @@
     -webkit-transform: skewY(-30deg) rotate(60deg);
         -ms-transform: skewY(-30deg) rotate(60deg);
             transform: skewY(-30deg) rotate(60deg);
-}
+}   
         .hex img {
 	opacity: 0.8;
     left: -100%;
@@ -48,6 +48,35 @@
     margin: 0 auto;
 	transform: rotate(180deg);
 }
+
+#hexOne h2{
+    text-align: center;
+    top: 45%;
+    padding-left: 10%;
+    color: rgb(245,245,245);
+
+}
+
+#hexTwo h2{
+    text-align: center;
+    top: 45%;
+    padding-left: 32%;
+    color: rgb(245,245,245);
+
+}
+
+#hexThree h2{
+    text-align: center;
+    top: 45%;
+    padding-left: 25%;
+    color: rgb(245,245,245);
+
+}
+
+.hexIn:hover h2{
+     color: transparent !important;
+}
+
 
 .hex h1, .hex p {
     width: 100%;
