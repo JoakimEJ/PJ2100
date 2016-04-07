@@ -30,6 +30,7 @@
             text-transform: uppercase;
             position: relative;
         }
+		
         
         #headerContainer{
             height: 70px;
@@ -157,12 +158,13 @@
 			height: 70%;
             width: 62.5%;
             position: absolute;
-            opacity: 0.5;
             color: black;
             padding: 14px 25px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
             overflow: auto;
 		}
+		
 			
 		/*--!END FORM WRAP--*/
 			
@@ -173,14 +175,18 @@
 		
 		#form {
 			margin-left: 140px;
+			/*position: relative;*/
+			z-index:1;
 			
             
 		}
 		
-		#form_table, th, td {
+		th, td {
+			padding: 30px;
+		}
+		#form_table {
 			border: 1px solid black !important;
 			padding: 30px;
-            
 		}
         
         th, td{
@@ -190,8 +196,9 @@
         }
 		
 		#form_table {
-			background-image: url(../form_bg.png);
-			background-size: cover;
+			/*background-image: url(form_bg.png);
+			background-size: cover;*/
+			
             
 		}
         
@@ -238,10 +245,15 @@
         
         </footer>
         
+        <div id=subIcon>
+            <img src="Undersider_Kode/images/Hexa_6.png" width="85px" height="100px">
+            <h2><a href="#" id="workshop">Add Workshop</a></h2>
+        </div>
+        
         <div id="Form_Wrap">
         	
         	<div id="form">
-			<h2>Legg inn workshop til DB</h2>
+			<h2>Create workshop</h2>
 			<br>
 			<form method="post" action="">
 				<table id="form_table">
@@ -303,7 +315,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="submit" name="submit" value="Submit">
+							<input type="submit" name="submit" value="Submit" style="width: 120px; height: 45px;">
 						</td>
 					</tr>
 				</table>
@@ -346,10 +358,7 @@
 		</div>
         	
         </div>
-        <div id=subIcon>
-            <img src="Undersider_Kode/images/Hexa_6.png" width="85px" height="100px">
-            <h2><a href="#" id="workshop">Add Workshop</a></h2>
-        </div>
+        
     </div>  
 </body>
 

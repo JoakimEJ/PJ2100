@@ -150,18 +150,18 @@
         /*--FORM WRAP--*/
 
         #Form_Wrap {
-			overflow: scroll;
 			background-image: url(Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
+			overflow: scroll;
             top: 20%;
             margin-left: 21%;
 			margin-right: 33%;
 			height: 60%;
             width: 60%;
             position: absolute;
-            opacity: 0.8;
             padding: 14px 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 		}
+		
 		
 		#Form_Wrap::-webkit-scrollbar {
 			width: 1em;
@@ -177,12 +177,17 @@
 		}
 
 		/*--!END FORM WRAP--*/
+		#db_table {
+			z-index: 2;
+		}
 		
-		#db_table, th, td {
-		/*text-transform: none;*/
-		border: 2px solid black;
+		#db_table {
 		color: rgb(50, 50, 50); 
 		margin: 0 auto;
+		}
+		
+		th, td {
+			padding-bottom: 10px;
 		}
 		
     </style>  
@@ -219,8 +224,7 @@
 <div id=subIcon>
             <img src="Undersider_Kode/images/Hexa_6.png" width="85px" height="100px">
             <h2><a href="#" id="workshop">View Workshop</a></h2>
-        </div>
-    </div> 
+        </div> 
    
    
    
@@ -235,28 +239,33 @@
 			?>
 
 			<table id="db_table">
-				<thead>
-					<tr>
-					<th>ID</th>
-					<th>Ansvarlig</th>
-					<th>Epost</th>
-					<th>Medvirkende</th>
-					<th>Overskrift</th>
-					<th>Beskrivelse</th>
-					</tr>
-				</thead>
-			<tbody>
 				<?php
 					while( $row = mysqli_fetch_array($result) ) {
 						echo
 						"<tr>
-						<td>{$row['ID']}</td>
-						<td>{$row['Ansvarlig']}</td>
-						<td>{$row['Epost']}</td>
-						<td>{$row['Medvirkende']}</td>
-						<td>{$row['Overskrift']}</td>
-						<td>{$row['Beskrivelse']}</td>
-						</tr>\n";
+							<th>Tittel:</th>
+								<td>{$row['Overskrift']}</td>
+						</tr>
+						<tr>
+							<th>Beskrivelse:</th>
+								<td>{$row['Beskrivelse']}</td>
+						</tr>
+						<tr>
+							<th>Ansvarlig:</th>
+								<td>{$row['Ansvarlig']}</td>
+						</tr>
+						<tr>
+							<th>Kontakt:</th>
+								<td>{$row['Epost']}</td>
+						</tr>
+						<tr>
+							<th>Medvirkende:</th>
+								<td>{$row['Medvirkende']}</td>
+						</tr>
+						<tr>
+							<th>-------------</th>
+								<td></td>
+						</tr>";
 				}
 
 				mysqli_close($conn);
@@ -265,9 +274,9 @@
 			</tbody>
 			</table>
 				<br><br>
-				<h2><a href="#">Trykk her for å legge inn flere eventer</a></h2>
+				<h2><a href="#">Trykk her for å legge inn en event</a></h2>
 
-		</div>
+		</div>       	
         	
     </div>  
 </body>
