@@ -65,8 +65,8 @@
         #login{
             right: 50px;
             position: absolute;
-            top: 5px;
-             white-space: nowrap;
+            bottom: auto;
+            white-space: nowrap;
         }
 
         #menu{
