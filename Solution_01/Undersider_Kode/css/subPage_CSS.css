@@ -141,7 +141,7 @@
         /*--!End SubpageIcon--*/
 
         /*--Buttons--*/
-        .button{
+        .button {
             height: 300px;
             width: 300px;
             position: absolute;
@@ -150,6 +150,13 @@
             color: white;
             padding: 14px 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            border-style: outset;
+            border-width: 5px;
+        }
+
+        .button:hover {
+            border-style: inset;
+            box-shadow: none;
         }
 
         #button1 {
