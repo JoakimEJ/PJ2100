@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-  <title>Tittel</title>
+  <title>Social</title>
     <style>
         
         
@@ -203,7 +203,7 @@
         <div id="headerContainer">
             <div id="navMenuTop">
                <h1><a id="fjerdingen" href="../Hovedside_Kode/index.html">CAMPUS FJERDINGEN</a></h1>
-                <p id="login">Logg inn</p>
+                <p id="login">Login</p>
             </div>
                 <div id="navMenuBottom">
                     <nav>
@@ -211,7 +211,7 @@
                             <li><a href="../Hovedside_Kode/index.html">Home</a></li>
                             <li><a href="subpage_workshop.html">Workshops</a></li>
                             <li><a href="subpage_kurs.html">Courses</a></li>
-                            <li><a href="subpage_sosialt.php">Social</a></li>
+                            <li><a href="subpage_sosialt2.php">Social</a></li>
                         </ul>
                     </nav>
                 </div>

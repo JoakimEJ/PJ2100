@@ -19,6 +19,13 @@
             text-transform: uppercase;
             position: relative;
         }
+
+		#login{
+            right: 50px;
+            position: absolute;
+            bottom: auto;
+            white-space: nowrap;
+        }
         
         #headerContainer{
             height: 70px;
@@ -54,8 +61,8 @@
         #login{
             right: 50px;
             position: absolute;
-            top: 5px;
-             white-space: nowrap;
+            bottom: auto;
+            white-space: nowrap;
         }
 
         #menu{

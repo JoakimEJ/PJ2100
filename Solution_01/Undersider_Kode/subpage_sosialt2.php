@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-  <title>View workshops</title>
+  <title>View social</title>
     <style>
         
         
@@ -17,18 +17,20 @@
         
         @font-face{
             font-family: 'font';
-            src: url(Hovedside_Kode/fonter/newrepublic/SF%20New%20Republic.ttf);
+            src: url(../Hovedside_Kode/fonter/newrepublic/SF%20New%20Republic.ttf);
         }
         
         html, body, #wrapper {
             height: 100%;
             width: 100%;
-			background-image: url(Hovedside_Kode/Design/BGs/Elegant_Background-2.jpg);
+			background-image: url(../Hovedside_Kode/Design/BGs/Elegant_Background-2.jpg);
             background-size: 100% 100%;
             font-family: 'font', sans-serif;
             text-transform: uppercase;
             position: relative;
         }
+		
+		
 		
         
         #headerContainer{
@@ -62,11 +64,11 @@
             color: rgb(50,50,50)
         }
         
-        #login{
+        #login {
             right: 50px;
             position: absolute;
-            top: 5px;
-             white-space: nowrap;
+            bottom: auto;
+            white-space: nowrap;
         }
 
         #menu{
@@ -129,7 +131,6 @@
             top: 5px;
             left: 25px;
             position: absolute;
-            
         }
         /*-!Footer-*/   
         
@@ -150,7 +151,7 @@
         /*--FORM WRAP--*/
 
         #Form_Wrap {
-			background-image: url(Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
+			background-image: url(../Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
 			overflow: scroll;
             top: 20%;
             margin-left: 21%;
@@ -208,10 +209,10 @@
                 <div id="navMenuBottom">
                     <nav>
                         <ul id="menu">    
-                            <li><a href="Hovedside_Kode/index.html">Home</a></li>
-                            <li><a href="Undersider_Kode/subpage_workshop.html">Workshops</a></li>
-                            <li><a href="Undersider_Kode/subpage_kurs.html">Courses</a></li>
-                            <li><a href="Undersider_Kode/subpage_sosialt2.php">Social</a></li>
+                            <li><a href="../Hovedside_Kode/index.html">Home</a></li>
+                            <li><a href="../Undersider_Kode/subpage_workshop.html">Workshops</a></li>
+                            <li><a href="../Undersider_Kode/subpage_kurs.html">Courses</a></li>
+                            <li><a href="../Undersider_Kode/subpage_sosialt2.php">Social</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -219,11 +220,11 @@
         </header>
         <footer>
             <div id="footerContainer">
-                    <img id="logo" src="Hovedside_Kode/images/logo.png" width="50px" height="50px">
+                    <img id="logo" src="../Hovedside_Kode/images/logo.png" width="50px" height="50px">
             </div>
 <div id=subIcon>
-            <img src="Undersider_Kode/images/Hexa_6.png" width="85px" height="100px">
-            <h2><a href="#" id="workshop">View Workshop</a></h2>
+            <img src="images/Hexa_6.png" width="85px" height="100px">
+            <h2><a href="#" id="workshop">View Social</a></h2>
         </div> 
    
    
@@ -232,7 +233,7 @@
         <div id="Form_Wrap">
         	
 			<?php
-				require 'connection.php';
+				require '../connection.php';
 
 				$query = "SELECT * FROM workshops_events";
 				$result = mysqli_query ($conn, $query);

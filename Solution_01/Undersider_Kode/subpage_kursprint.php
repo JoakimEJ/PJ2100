@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-  <title>View workshops</title>
+  <title>Add courses</title>
     <style>
         
         
@@ -17,13 +17,13 @@
         
         @font-face{
             font-family: 'font';
-            src: url(Hovedside_Kode/fonter/newrepublic/SF%20New%20Republic.ttf);
+            src: url(../Hovedside_Kode/fonter/newrepublic/SF%20New%20Republic.ttf);
         }
         
         html, body, #wrapper {
             height: 100%;
             width: 100%;
-			background-image: url(Hovedside_Kode/Design/BGs/Elegant_Background-2.jpg);
+            background-image: url(../Hovedside_Kode/Design/BGs/Elegant_Background-2.jpg);
             background-size: 100% 100%;
             font-family: 'font', sans-serif;
             text-transform: uppercase;
@@ -65,8 +65,8 @@
         #login{
             right: 50px;
             position: absolute;
-            top: 5px;
-             white-space: nowrap;
+            bottom: auto;
+            white-space: nowrap;
         }
 
         #menu{
@@ -136,13 +136,13 @@
         /*--SubpageIcon--*/
         #subIcon {
             top: 20%;
-            left: 2%;
+            left: 1%;
             position: absolute;
         }
 
         #workshop {
             position: absolute;
-            top: 20%;
+            top: 25%;
             left: 100px;
         }
         /*--!End SubpageIcon--*/
@@ -150,54 +150,74 @@
         /*--FORM WRAP--*/
 
         #Form_Wrap {
-			background-image: url(Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
-			overflow: scroll;
-            top: 20%;
-            margin-left: 21%;
+			background-image: url(../Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
+            top: 16%;
+            margin-left: 20%;
 			margin-right: 33%;
-			height: 60%;
-            width: 60%;
+			height: 70%;
+            width: 62.5%;
             position: absolute;
+            color: black;
             padding: 14px 25px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            overflow: auto;
 		}
 		
-		
-		#Form_Wrap::-webkit-scrollbar {
-			width: 1em;
-		}
-
-		#Form_Wrap::-webkit-scrollbar-track {
-			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-		}
-
-		#Form_Wrap::-webkit-scrollbar-thumb {
-			background-color: darkgrey;
-			outline: 1px solid slategrey;
-		}
-
+			
 		/*--!END FORM WRAP--*/
-		#db_table {
-			z-index: 2;
-		}
+			
+			
+		/* 
+		** START ALL CSS RELATED TO DB_FORM
+		*/
 		
-		#db_table {
-		color: rgb(50, 50, 50); 
-		margin: 0 auto;
+		#form {
+			margin-left: 140px;
+			/*position: relative;*/
+			z-index:1;
+			
+            
 		}
 		
 		th, td {
-			padding-bottom: 10px;
+			padding: 30px;
 		}
+		#form_table {
+			border: 1px solid black !important;
+			padding: 30px;
+		}
+        
+        th, td{
+        
+            padding-top: 20px;
+            padding: 14px;
+        }
+		
+		#form_table {
+			/*background-image: url(form_bg.png);
+			background-size: cover;*/
+			
+            
+		}
+        
+        .error{
+            font-size: 10px;
+            margin-right: 1px;
+            width: 90%;
+            height: 30%;
+            
+            
+        }
+		/*  END ALL CSS RELATED TO DB_FORM  */
+		
 		
     </style>  
 
 </head>
 
 <body>
-   
-   
-   <body>
+   <?php require '../Handle_WSform.php'; ?>
     <div id="wrapper">
         <header>
         <div id="headerContainer">
@@ -208,10 +228,10 @@
                 <div id="navMenuBottom">
                     <nav>
                         <ul id="menu">    
-                            <li><a href="Hovedside_Kode/index.html">Home</a></li>
-                            <li><a href="Undersider_Kode/subpage_workshop.html">Workshops</a></li>
-                            <li><a href="Undersider_Kode/subpage_kurs.html">Courses</a></li>
-                            <li><a href="Undersider_Kode/subpage_sosialt2.php">Social</a></li>
+                            <li><a href="../Hovedside_Kode/index.html">Home</a></li>
+                            <li><a href="../Undersider_Kode/subpage_workshop.html">Workshops</a></li>
+                            <li><a href="subpage_kurs.html">Courses</a></li>
+                            <li><a href="subpage_sosialt2.php">Social</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -219,11 +239,14 @@
         </header>
         <footer>
             <div id="footerContainer">
-                    <img id="logo" src="Hovedside_Kode/images/logo.png" width="50px" height="50px">
+                    <img id="logo" src="../Hovedside_Kode/images/logo.png" width="50px" height="50px">
             </div>
-<div id=subIcon>
-            <img src="Undersider_Kode/images/Hexa_6.png" width="85px" height="100px">
-            <h2><a href="#" id="workshop">View Workshop</a></h2>
+        
+        </footer>
+        
+        <div id=subIcon>
+            <img src="images/Hexa_6.png" width="85px" height="100px">
+            <h2><a href="#" id="workshop">View Course</a></h2>
         </div> 
    
    
@@ -232,7 +255,7 @@
         <div id="Form_Wrap">
         	
 			<?php
-				require 'connection.php';
+				require '../connection.php';
 
 				$query = "SELECT * FROM workshops_events";
 				$result = mysqli_query ($conn, $query);

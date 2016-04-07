@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-  <title>Add workshop</title>
+  <title>Add courses</title>
     <style>
         
         
@@ -17,13 +17,13 @@
         
         @font-face{
             font-family: 'font';
-            src: url(Hovedside_Kode/fonter/newrepublic/SF%20New%20Republic.ttf);
+            src: url(../Hovedside_Kode/fonter/newrepublic/SF%20New%20Republic.ttf);
         }
         
         html, body, #wrapper {
             height: 100%;
             width: 100%;
-            background-image: url(Hovedside_Kode/Design/BGs/Elegant_Background-2.jpg);
+            background-image: url(../Hovedside_Kode/Design/BGs/Elegant_Background-2.jpg);
             background-size: 100% 100%;
             font-family: 'font', sans-serif;
             text-transform: uppercase;
@@ -65,8 +65,8 @@
         #login{
             right: 50px;
             position: absolute;
-            top: 5px;
-             white-space: nowrap;
+            bottom: auto;
+            white-space: nowrap;
         }
 
         #menu{
@@ -150,7 +150,7 @@
         /*--FORM WRAP--*/
 
         #Form_Wrap {
-			background-image: url(Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
+			background-image: url(../Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
             top: 16%;
             margin-left: 20%;
 			margin-right: 33%;
@@ -217,7 +217,7 @@
 </head>
 
 <body>
-   <?php require 'Handle_WSform.php'; ?>
+   <?php require '../Handle_WSform.php'; ?>
     <div id="wrapper">
         <header>
         <div id="headerContainer">
@@ -228,10 +228,10 @@
                 <div id="navMenuBottom">
                     <nav>
                         <ul id="menu">    
-                            <li><a href="Hovedside_Kode/index.html">Home</a></li>
-                            <li><a href="Undersider_Kode/subpage_workshop.html">Workshops</a></li>
-                            <li><a href="Undersider_Kode/subpage_kurs.html">Courses</a></li>
-                            <li><a href="Undersider_Kode/subpage_sosialt2.php">Social</a></li>
+                            <li><a href="../Hovedside_Kode/index.html">Home</a></li>
+                            <li><a href="../Undersider_Kode/subpage_workshop.html">Workshops</a></li>
+                            <li><a href="subpage_kurs.html">Courses</a></li>
+                            <li><a href="subpage_sosialt2.php">Social</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -239,20 +239,20 @@
         </header>
         <footer>
             <div id="footerContainer">
-                    <img id="logo" src="Hovedside_Kode/images/logo.png" width="50px" height="50px">
+                    <img id="logo" src="../Hovedside_Kode/images/logo.png" width="50px" height="50px">
             </div>
         
         </footer>
         
         <div id=subIcon>
-            <img src="Undersider_Kode/images/Hexa_6.png" width="85px" height="100px">
-            <h2><a href="#" id="workshop">Add Workshop</a></h2>
+            <img src="images/Hexa_6.png" width="85px" height="100px">
+            <h2><a href="#" id="workshop">Add Course</a></h2>
         </div>
         
         <div id="Form_Wrap">
         	
         	<div id="form">
-			<h2>Create workshop</h2>
+			<h2>Create course</h2>
 			<br>
 			<form method="post" action="">
 				<table id="form_table">
@@ -325,7 +325,7 @@
 
 				ini_set('display_errors', 1);
 				error_reporting(~0);
-				require 'connection.php';
+				require '../connection.php';
 
 				if ($nameCond && $mailCond && $teamCond && $titleCond && $descCond) {
 					$insertCondition = true;
