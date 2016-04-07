@@ -135,14 +135,14 @@
         
         /*--SubpageIcon--*/
         #subIcon {
-            top: 15%;
-            left: 5%;
+            top: 20%;
+            left: 1%;
             position: absolute;
         }
 
         #workshop {
             position: absolute;
-            top: 20%;
+            top: 25%;
             left: 100px;
         }
         /*--!End SubpageIcon--*/
@@ -151,16 +151,17 @@
 
         #Form_Wrap {
 			background-image: url(Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
-            top: 30%;
-            margin-left: 33%;
+            top: 16%;
+            margin-left: 20%;
 			margin-right: 33%;
-			height: 50%;
-            width: 30%;
+			height: 70%;
+            width: 62.5%;
             position: absolute;
             opacity: 0.5;
             color: black;
             padding: 14px 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            overflow: auto;
 		}
 			
 		/*--!END FORM WRAP--*/
@@ -171,19 +172,37 @@
 		*/
 		
 		#form {
-			margin-left: 20px;
-			margin-top: 50px;
+			margin-left: 140px;
+			
+            
 		}
 		
 		#form_table, th, td {
 			border: 1px solid black !important;
-			padding: 8px;
+			padding: 30px;
+            
 		}
+        
+        th, td{
+        
+            padding-top: 20 px;
+            padding: 14px;
+        }
 		
 		#form_table {
 			background-image: url(../form_bg.png);
 			background-size: cover;
+            
 		}
+        
+        .error{
+            font-size: 10px;
+            margin-right: 1px;
+            width: 90%;
+            height: 30%;
+            
+            
+        }
 		/*  END ALL CSS RELATED TO DB_FORM  */
 		
 		
@@ -265,7 +284,7 @@
 							<p>Title: </p>
 						</td>
 						<td>
-							<textarea name="title" rows="5" cols="40"><?php echo $title;?></textarea>
+							<textarea name="title" rows="5" cols="40" style="height: 35px"><?php echo $title;?></textarea>
 						</td>
 						<td>
 							<span class="error">* <?php echo $titleErr; ?></span>
@@ -276,7 +295,7 @@
 							<p>Description: </p>
 						</td>
 						<td>
-							<textarea name="desc" rows="5" cols="40"><?php echo $desc; ?></textarea>
+							<textarea name="desc" rows="5" cols="40" style="height: 45px"><?php echo $desc; ?></textarea>
 						</td>
 						<td>
 							<span class="error">* <?php echo $descErr; ?></span>

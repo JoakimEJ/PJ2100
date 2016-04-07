@@ -135,8 +135,8 @@
         
         /*--SubpageIcon--*/
         #subIcon {
-            top: 15%;
-            left: 5%;
+            top: 20%;
+            left: 2%;
             position: absolute;
         }
 
@@ -152,13 +152,13 @@
         #Form_Wrap {
 			overflow: scroll;
 			background-image: url(Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
-            top: 30%;
-            margin-left: 22%;
+            top: 20%;
+            margin-left: 21%;
 			margin-right: 33%;
 			height: 60%;
             width: 60%;
             position: absolute;
-            opacity: 1;
+            opacity: 0.8;
             padding: 14px 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 		}
