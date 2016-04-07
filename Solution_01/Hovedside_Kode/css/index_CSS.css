@@ -34,7 +34,7 @@
             text-align: center;
             background-color: rgb(245,245,245);
             opacity: 0.8;
-             white-space: nowrap;
+            white-space: nowrap;
         }
         
         #fjerdingen{
@@ -53,11 +53,11 @@
         #login{
             right: 50px;
             position: absolute;
-            top: 5px;
-             white-space: nowrap;
+            bottom: auto;
+            white-space: nowrap;
         }
 
-	#menu{
+	    #menu{
             border-width:1px 0;
             list-style:none;
             margin:0;
