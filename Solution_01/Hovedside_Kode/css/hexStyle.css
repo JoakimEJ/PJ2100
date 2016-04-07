@@ -79,7 +79,7 @@
 
 
 .hex h1, .hex p {
-    width: 100%;
+    width: 102%;
     left:-1%; /* prevent line on the right where background doesn't cover image */
     padding: 5%;
     box-sizing:border-box;
