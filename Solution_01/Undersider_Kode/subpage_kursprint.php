@@ -239,13 +239,13 @@
         </header>
         <footer>
             <div id="footerContainer">
-                    <img id="logo" src="../Hovedside_Kode/images/logo.png" width="50px" height="50px">
+                    <img id="logo" src="../Hovedside_Kode/images/logo.png" style="width:50px; height=50px;" alt="logo">
             </div>
         
         </footer>
         
         <div id=subIcon>
-            <img src="images/Hexa_6.png" width="85px" height="100px">
+            <img src="images/Hexa_6.png" style="width:85px; height=100px;" alt="icon">
             <h2><a href="#" id="workshop">View Course</a></h2>
         </div> 
    

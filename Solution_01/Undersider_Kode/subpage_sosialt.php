@@ -219,10 +219,10 @@
         </header>
         <footer>
             <div id="footerContainer">
-                    <img id="logo" src="../Hovedside_Kode/images/logo.png" width="50px" height="50px">
+                    <img id="logo" src="../Hovedside_Kode/images/logo.png" style="width:50px; height=50px;" alt="logo">
             </div>
 <div id=subIcon>
-            <img src="images/Hexa_6.png" width="85px" height="100px">
+            <img src="images/Hexa_6.png" style="width:85px; height=100px;" alt="icon">
             <h2><a href="#" id="workshop">Social</a></h2>
         </div> 
    
