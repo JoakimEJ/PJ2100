@@ -123,6 +123,17 @@
             position: absolute;
             
         }
+
+        .footerText {
+            position: absolute;
+            color: black;
+
+        }
+
+        #footText1 {
+            bottom: auto;
+            text-align: center;
+        }
         /*-!Footer-*/   
         
         /*--HexMeny--*/
@@ -135,8 +146,6 @@
             margin: auto;
             position:relative;
             overflow: hidden;
-    
-            
         }
         
         #hexOne{
