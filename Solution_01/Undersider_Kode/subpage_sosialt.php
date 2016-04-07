@@ -223,7 +223,7 @@
             </div>
 <div id=subIcon>
             <img src="images/Hexa_6.png" width="85px" height="100px">
-            <h2><a href="#" id="workshop">View Workshop</a></h2>
+            <h2><a href="#" id="workshop">Social</a></h2>
         </div> 
    
    
