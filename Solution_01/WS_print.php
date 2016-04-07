@@ -192,10 +192,7 @@
 		
     </style>  
 
-</head>
-
-<body>
-   
+</head> 
    
    <body>
     <div id="wrapper">
@@ -221,6 +218,7 @@
             <div id="footerContainer">
                     <img id="logo" src="Hovedside_Kode/images/logo.png" alt="yolo" style="width: 50px; height: 50px;">
             </div>
+		</footer>
 <div id=subIcon>
             <img src="Undersider_Kode/images/Hexa_6.png" alt="yolo2" style="width: 85px; height: 100px;">
             <h2><a href="#" id="workshop">View Workshop</a></h2>
