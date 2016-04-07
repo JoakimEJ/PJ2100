@@ -24,7 +24,7 @@
         html, body, #wrapper {
             height: 100%;
             width: 100%;
-            background-image: url(../Hovedside_Kode/Design/BGs/Elegant_Background-2.jpg);
+            background-image: url(Hovedside_Kode/Design/BGs/Elegant_Background-2.jpg);
             background-size: 100% 100%;
             font-family: 'font', sans-serif;
             text-transform: uppercase;
@@ -150,13 +150,13 @@
         /*--FORM WRAP--*/
 
         #Form_Wrap {
+			background-image: url(Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
             top: 30%;
             margin-left: 33%;
 			margin-right: 33%;
 			height: 50%;
             width: 30%;
             position: absolute;
-            background-color: #dfdfdf;
             opacity: 0.5;
             color: black;
             padding: 14px 25px;
@@ -192,21 +192,21 @@
 </head>
 
 <body>
-   <?php require 'Handle_WSform.php' ?>
+   <?php require 'Handle_WSform.php'; ?>
     <div id="wrapper">
         <header>
         <div id="headerContainer">
             <div id="navMenuTop">
-               <h1><a id="fjerdingen" href="index.html">CAMPUS FJERDINGEN</a></h1>
+               <h1><a id="fjerdingen" href="../Hovedside_Kode/index.html">CAMPUS FJERDINGEN</a></h1>
                 <p id="login">Logg inn</p>
             </div>
                 <div id="navMenuBottom">
                     <nav>
                         <ul id="menu">    
-                            <li><a href="#">Test</a></li>
-                            <li><a href="#">Fane</a></li>
-                            <li><a href="#">Kaffe</a></li>
-                            <li><a href="#">Brokkoli</a></li>
+                            <li><a href="Hovedside_Kode/index.html">Hjem</a></li>
+                            <li><a href="Undersider_Kode/subpage_workshop.html">Workshop</a></li>
+                            <li><a href="Undersider_Kode/subpage_kurs.html">Kurs</a></li>
+                            <li><a href="Undersider_Kode/subpage_sosialt.html">Sosialt</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -214,7 +214,7 @@
         </header>
         <footer>
             <div id="footerContainer">
-                    <img id="logo" src="../Undersider_Kode/images/logo.png" width="50px" height="50px">
+                    <img id="logo" src="Hovedside_Kode/images/logo.png" width="50px" height="50px">
             </div>
         
         </footer>
@@ -328,8 +328,8 @@
         	
         </div>
         <div id=subIcon>
-            <img src="../Undersider_Kode/images/Hexa_6.png" width="85px" height="100px">
-            <h2><a href="#" id="workshop">Create Workshop</a></h2>
+            <img src="Undersider_Kode/images/Hexa_6.png" width="85px" height="100px">
+            <h2><a href="#" id="workshop">Add Workshop</a></h2>
         </div>
     </div>  
 </body>

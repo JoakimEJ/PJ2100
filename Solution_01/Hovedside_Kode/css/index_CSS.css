@@ -67,7 +67,8 @@
             background-color: rgb(245,245,245);
             opacity: 0.8;
             height: 40px;
-            box-shadow: 2px 4px 10px -2px #888888;
+            -webkit-box-shadow: 2px 4px 10px -2px #888888;
+			-moz-box-shadow: 2px 4px 10px -2px #888888;
         }
        
         #menu li {

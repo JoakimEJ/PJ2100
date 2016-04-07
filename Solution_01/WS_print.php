@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="hexStyle.css"> 
     
 
   <title>Tittel</title>
@@ -24,12 +23,13 @@
         html, body, #wrapper {
             height: 100%;
             width: 100%;
-            background-image: url(../Hovedside_Kode/Design/BGs/Elegant_Background-2.jpg);
+			background-image: url(Hovedside_Kode/Design/BGs/Elegant_Background-2.jpg);
             background-size: 100% 100%;
             font-family: 'font', sans-serif;
             text-transform: uppercase;
             position: relative;
         }
+		
         
         #headerContainer{
             height: 70px;
@@ -150,25 +150,38 @@
         /*--FORM WRAP--*/
 
         #Form_Wrap {
+			overflow: scroll;
+			background-image: url(Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
             top: 30%;
-            margin-left: 33%;
+            margin-left: 22%;
 			margin-right: 33%;
 			height: 60%;
-            width: 50%;
+            width: 60%;
             position: absolute;
-            background-color: #dfdfdf;
-            opacity: 0.5;
-            color: black;
+            opacity: 1;
             padding: 14px 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 		}
-			
+		
+		#Form_Wrap::-webkit-scrollbar {
+			width: 1em;
+		}
+
+		#Form_Wrap::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		}
+
+		#Form_Wrap::-webkit-scrollbar-thumb {
+			background-color: darkgrey;
+			outline: 1px solid slategrey;
+		}
+
 		/*--!END FORM WRAP--*/
 		
-		#db_table {
-		border: 2 solid black; 
-		background-color: #84ed86; 
-		color: #761a9b; 
+		#db_table, th, td {
+		/*text-transform: none;*/
+		border: 2px solid black;
+		color: rgb(50, 50, 50); 
 		margin: 0 auto;
 		}
 		
@@ -177,20 +190,23 @@
 </head>
 
 <body>
+   
+   
+   <body>
     <div id="wrapper">
         <header>
         <div id="headerContainer">
             <div id="navMenuTop">
-               <h1><a id="fjerdingen" href="index.html">CAMPUS FJERDINGEN</a></h1>
+               <h1><a id="fjerdingen" href="../Hovedside_Kode/index.html">CAMPUS FJERDINGEN</a></h1>
                 <p id="login">Logg inn</p>
             </div>
                 <div id="navMenuBottom">
                     <nav>
                         <ul id="menu">    
-                            <li><a href="#">Test</a></li>
-                            <li><a href="#">Fane</a></li>
-                            <li><a href="#">Kaffe</a></li>
-                            <li><a href="#">Brokkoli</a></li>
+                            <li><a href="Hovedside_Kode/index.html">Hjem</a></li>
+                            <li><a href="Undersider_Kode/subpage_workshop.html">Workshop</a></li>
+                            <li><a href="Undersider_Kode/subpage_kurs.html">Kurs</a></li>
+                            <li><a href="Undersider_Kode/subpage_sosialt.html">Sosialt</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -198,10 +214,16 @@
         </header>
         <footer>
             <div id="footerContainer">
-                    <img id="logo" src="../Undersider_Kode/images/logo.png" width="50px" height="50px">
+                    <img id="logo" src="Hovedside_Kode/images/logo.png" width="50px" height="50px">
             </div>
-        
-        </footer>
+<div id=subIcon>
+            <img src="Undersider_Kode/images/Hexa_6.png" width="85px" height="100px">
+            <h2><a href="#" id="workshop">View Workshop</a></h2>
+        </div>
+    </div> 
+   
+   
+   
         
         <div id="Form_Wrap">
         	
@@ -247,11 +269,6 @@
 
 		</div>
         	
-       
-        <div id=subIcon>
-            <img src="../Undersider_Kode/images/Hexa_6.png" width="85px" height="100px">
-            <h2><a href="#" id="workshop">View Workshops</a></h2>
-        </div>
     </div>  
 </body>
 
