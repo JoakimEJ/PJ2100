@@ -239,13 +239,13 @@
         </header>
         <footer>
             <div id="footerContainer">
-                    <img id="logo" src="Hovedside_Kode/images/logo.png" width="50px" height="50px">
+                    <img id="logo" src="Hovedside_Kode/images/logo.png" alt="yolo" style="width: 50px; height: 50px;">
             </div>
         
         </footer>
         
         <div id=subIcon>
-            <img src="Undersider_Kode/images/Hexa_6.png" width="85px" height="100px">
+            <img src="Undersider_Kode/images/Hexa_6.png" alt="yolo2" style="width: 85px; height: 100px;">
             <h2><a href="#" id="workshop">Add Workshop</a></h2>
         </div>
         
