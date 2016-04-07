@@ -1,3 +1,13 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+  <title>Tittel</title>
+    <style>
         
         
         *{
@@ -7,18 +17,19 @@
         
         @font-face{
             font-family: 'font';
-            src: url(../fonter/newrepublic/SF%20New%20Republic.ttf);
+            src: url(../Hovedside_Kode/fonter/newrepublic/SF%20New%20Republic.ttf);
         }
         
         html, body, #wrapper {
             height: 100%;
             width: 100%;
-            background-image: url(../BGs/Elegant_Background-2.jpg);
+			background-image: url(../Hovedside_Kode/Design/BGs/Elegant_Background-2.jpg);
             background-size: 100% 100%;
             font-family: 'font', sans-serif;
             text-transform: uppercase;
             position: relative;
         }
+		
         
         #headerContainer{
             height: 70px;
@@ -124,58 +135,149 @@
         
         /*--SubpageIcon--*/
         #subIcon {
-            top: 18%;
+            top: 20%;
             left: 2%;
             position: absolute;
         }
-		#subIcon h3 {
-
-		}
 
         #workshop {
             position: absolute;
-            top: 40%;
+            top: 20%;
             left: 100px;
         }
         /*--!End SubpageIcon--*/
 
-        /*--Buttons--*/
-        .button {
-            height: 300px;
-            width: 300px;
+        /*--FORM WRAP--*/
+
+        #Form_Wrap {
+			background-image: url(../Hovedside_Kode/Design/BGs/Blured/Blurred4.jpg);
+			overflow: scroll;
+            top: 20%;
+            margin-left: 21%;
+			margin-right: 33%;
+			height: 60%;
+            width: 60%;
             position: absolute;
-            background: rgba(50, 191, 219, 0.15);
-            color: rgb(50, 50, 50);
             padding: 14px 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-            border-style: outset;
-            border-width: 5px;
-			text-align: center;
-        }
-
-		.button p {
-			font-size: 50px;
-			padding-top: 30%;
+		}
+		
+		
+		#Form_Wrap::-webkit-scrollbar {
+			width: 1em;
 		}
 
-        .button:hover {
-            border-style: inset;
-            box-shadow: none;
-        }
+		#Form_Wrap::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		}
 
-        #button1 {
-            top: 36%;
-            left: 5%;
-        }
+		#Form_Wrap::-webkit-scrollbar-thumb {
+			background-color: darkgrey;
+			outline: 1px solid slategrey;
+		}
 
-        #button2 {
-            top: 36%;
-            left: 38%;
-        }
+		/*--!END FORM WRAP--*/
+		#db_table {
+			z-index: 2;
+		}
+		
+		#db_table {
+		color: rgb(50, 50, 50); 
+		margin: 0 auto;
+		}
+		
+		th, td {
+			padding-bottom: 10px;
+		}
+		
+    </style>  
 
-        #button3 {
-            top: 36%;
-            left: 71%;
-        }
-        /*--!End Buttons--*/
-        }
+</head>
+
+<body>
+   
+   
+   <body>
+    <div id="wrapper">
+        <header>
+        <div id="headerContainer">
+            <div id="navMenuTop">
+               <h1><a id="fjerdingen" href="../Hovedside_Kode/index.html">CAMPUS FJERDINGEN</a></h1>
+                <p id="login">Logg inn</p>
+            </div>
+                <div id="navMenuBottom">
+                    <nav>
+                        <ul id="menu">    
+                            <li><a href="../Hovedside_Kode/index.html">Home</a></li>
+                            <li><a href="subpage_workshop.html">Workshops</a></li>
+                            <li><a href="subpage_kurs.html">Courses</a></li>
+                            <li><a href="subpage_sosialt.php">Social</a></li>
+                        </ul>
+                    </nav>
+                </div>
+             </div>
+        </header>
+        <footer>
+            <div id="footerContainer">
+                    <img id="logo" src="../Hovedside_Kode/images/logo.png" width="50px" height="50px">
+            </div>
+<div id=subIcon>
+            <img src="images/Hexa_6.png" width="85px" height="100px">
+            <h2><a href="#" id="workshop">View Workshop</a></h2>
+        </div> 
+   
+   
+   
+        
+        <div id="Form_Wrap">
+        	
+			<?php
+				require '../connection.php';
+
+				$query = "SELECT * FROM workshops_events";
+				$result = mysqli_query ($conn, $query);
+			?>
+
+			<table id="db_table">
+				<?php
+					while( $row = mysqli_fetch_array($result) ) {
+						echo
+						"<tr>
+							<th>Tittel:</th>
+								<td>{$row['Overskrift']}</td>
+						</tr>
+						<tr>
+							<th>Beskrivelse:</th>
+								<td>{$row['Beskrivelse']}</td>
+						</tr>
+						<tr>
+							<th>Ansvarlig:</th>
+								<td>{$row['Ansvarlig']}</td>
+						</tr>
+						<tr>
+							<th>Kontakt:</th>
+								<td>{$row['Epost']}</td>
+						</tr>
+						<tr>
+							<th>Medvirkende:</th>
+								<td>{$row['Medvirkende']}</td>
+						</tr>
+						<tr>
+							<th>-------------</th>
+								<td></td>
+						</tr>";
+				}
+
+				mysqli_close($conn);
+				?>
+
+			</tbody>
+			</table>
+				<br><br>
+
+		</div>       	
+        	
+    </div>  
+</body>
+
+</html>

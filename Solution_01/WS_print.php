@@ -274,7 +274,6 @@
 			</tbody>
 			</table>
 				<br><br>
-				<h2><a href="#">Trykk her for å legge inn en event</a></h2>
 
 		</div>       	
         	
